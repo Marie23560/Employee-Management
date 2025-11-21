@@ -1,4 +1,4 @@
-package org.example.employee_management.Dtos;
+package org.example.employee_management.Dtos.EmployeeDto;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
