@@ -29,7 +29,7 @@ import org.springframework.context.annotation.Configuration;
         scheme = "bearer",
         type = SecuritySchemeType.HTTP,
         bearerFormat = "JWT",
-        in = SecuritySchemeIn.HEADER
+        in =     SecuritySchemeIn.HEADER
 )
 public class OpenAPIConfig {
 
