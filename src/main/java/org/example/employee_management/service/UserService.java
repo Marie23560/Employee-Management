@@ -105,22 +105,22 @@ public class UserService {
                             throw new AccessDeniedException("You cannot update another user's account");
                         }
 
-                        //USER can update everything but not their role
+
                         target.setUsername(userRequestDTO.getUsername());
                         target.setEmail(userRequestDTO.getEmail());
                         target.setPassword(passwordEncoder.encode(userRequestDTO.getPassword()));
 
-                    } else if (actor.getRole().equals("ROLE_ADMIN")) { //if the Jwt role is ROLE
+                    } else if (actor.getRole().equals("ROLE_ADMIN")) {
 
                         if(actor.getId().equals(id)) {
 
-                            // Admin updating their own credentials except role
+
                             target.setUsername(userRequestDTO.getUsername());
                             target.setEmail(userRequestDTO.getEmail());
                             target.setPassword(passwordEncoder.encode(userRequestDTO.getPassword()));
                         } else {
 
-                            // Admin updating someone else's role
+
                             target.setRole(userRequestDTO.getRole());
                         }
                     }
