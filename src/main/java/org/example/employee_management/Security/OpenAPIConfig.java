@@ -28,7 +28,7 @@ import org.springframework.context.annotation.Configuration;
                         description = "Local Server"
                 ),
                 @Server(
-                        url = "http://localhost:8080/employee-management-production-5544.up.railway.app",
+                        url = "https://employee-management-production-5544.up.railway.app",
                         description = "Production Server"
                 )
         },
